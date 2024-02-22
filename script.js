@@ -6,6 +6,9 @@ function generateLink() {
         return;
     }
 
+    document.getElementById("senderNameDisplay").innerText = `Sent by: ${senderName}`;
+    document.getElementById("senderNameDisplay").classList.remove("hidden");
+
     const receiverLink = window.location.href.split('?')[0] + `?sender=${encodeURIComponent(senderName)}&wish=${encodeURIComponent(wishText)}`;
     document.getElementById("linkOutput").innerHTML = `<p>Share this link: <a href="${receiverLink}" target="_blank">${receiverLink}</a></p>`;
     document.getElementById("linkOutput").classList.remove("hidden");
