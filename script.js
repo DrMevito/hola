@@ -20,8 +20,7 @@ window.onload = function() {
     const senderName = urlParams.get('sender');
     const wishText = urlParams.get('wish');
     if (senderName && wishText) {
-        document.getElementById("senderName").value = senderName;
-        document.getElementById("wishText").value = wishText;
-        generateLink();
+        document.getElementById("senderNameDisplay").innerText = `Sent by: ${senderName}`;
+        document.getElementById("senderNameDisplay").classList.remove("hidden");
     }
 };
